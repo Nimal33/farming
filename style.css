@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary: rgb(3, 163, 11);
+    /* Agriculture Green */
+    --primary-light: #4caf50;
+    --secondary: #502a1e;
+    /* Soil Brown */
+    --accent: #ffb300;
+    /* Harvest Gold */
+    --bg-white: #ffffff;
+    --bg-light: #f4f7f4;
+    --text-dark: #1b261b;
+    --text-muted: #5e6d5e;
+    --shadow-sm: 0 4px 10px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 8px 15px rgba(29, 138, 34, 0.205);
+    --radius: 15px;
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+}
+
+/* Custom Utilities */
+.text-primary-color {
+    color: var(--primary);
+}
+
+.bg-primary-color {
+    background-color: var(--primary);
+}
+
+.bg-secondary-color {
+    background-color: var(--secondary);
+}
+
+/* Components */
+.card-modern {
+    background: var(--bg-white);
+    border: none;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+.card-modern:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-modern {
+    border-radius: 50px;
+    padding: 10px 25px;
+    font-weight: 600;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-primary-custom {
+    background: var(--primary);
+    color: white;
+    border: none;
+}
+
+.btn-primary-custom:hover {
+    background: var(--primary-light);
+    color: white;
+    transform: scale(1.05);
+}
+
+.btn-secondary-custom {
+    background: var(--secondary);
+    color: white;
+    border: none;
+}
+
+.btn-secondary-custom:hover {
+    background: #4e342e;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero-gradient {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1592910129881-892b7b392e81?auto=format&fit=crop&q=80&w=1500');
+    background-size: cover;
+    background-position: center;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+/* Forms */
+.form-control,
+.form-select {
+    border-radius: 10px;
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    background-color: #fcfcfc;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.25rem rgba(46, 125, 50, 0.15);
+}
+
+/* WhatsApp Float */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: rgb(1, 189, 48);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.425);
+    z-index: 1000;
+    transition: var(--transition);
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1) rotate(10deg);
+    color: white;
+}
+
+/* Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}

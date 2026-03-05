@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trichy Farm Labour Connect - Vivasayigalukku Velai Aalu Easy-aa Kidaikkum</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-white bg-white sticky-top shadow-sm py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="./logo.png" alt="Logo" class="me-2"
+                    style="height: 70px; width: auto; object-fit: contain;">
+                <div>
+                    <span class="fw-bold fs-4 text-primary-color d-block" style="line-height: 1;"
+                        data-i18n="appName">Trichy Farm Labour</span>
+                    <small class="text-secondary fw-bold" style="font-size: 0.7rem;"
+                        data-i18n="appTagline">Vivasayigalukku Velai Aalu Easy</small>
+                </div>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center gap-2">
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold" href="#hero" data-i18n="nav_home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold" href="#post-job" data-i18n="nav_postJob">Post Job</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold" href="#register" data-i18n="nav_register">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold" href="#jobs" data-i18n="nav_jobs">Available Jobs</a>
+                    </li>
+                    <li class="nav-item ms-lg-2">
+                        <button id="langToggle" class="btn btn-outline-success btn-modern py-2 px-3">தமிழ்</button>
+                    </li>
+                    <li class="nav-item ms-lg-2">
+                        <a href="https://wa.me/91XXXXXXXXXX" class="btn btn-modern btn-primary-custom"
+                            data-i18n="nav_whatsapp">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Carousel -->
+    <header id="hero" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active"
+                style="min-height: 75vh; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./hero1.png') center/cover no-repeat;">
+                <div class="container h-100 d-flex align-items-center" style="min-height: 75vh;">
+                    <div class="row w-100">
+                        <div class="col-lg-7">
+                            <h1 class="display-3 fw-bold mb-3 text-white" data-i18n="hero_title1">Trichy Farmers-ku
+                                Instant Velai Aalu Kidaikkum
+                            </h1>
+                            <p class="lead mb-5 opacity-90 text-white" data-i18n="hero_sub1">Harvesting, Planting,
+                                Irrigation – Ella velaiyum
+                                oru click la. Connect with local workers instantly.</p>
+                            <div class="d-flex flex-wrap gap-3">
+                                <a href="#post-job" class="btn btn-modern btn-primary-custom btn-lg"
+                                    data-i18n="hero_btn_post">Post Labour
+                                    Requirement</a>
+                                <a href="#register" class="btn btn-modern btn-secondary-custom btn-lg"
+                                    data-i18n="hero_btn_reg">Register as
+                                    Worker</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-item"
+                style="min-height: 75vh; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./hero2.png') center/cover no-repeat;">
+                <div class="container h-100 d-flex align-items-center" style="min-height: 75vh;">
+                    <div class="row w-100 text-center text-lg-start">
+                        <div class="col-lg-7">
+                            <h1 class="display-3 fw-bold mb-3 text-white" data-i18n="hero_title2">Digital Solution for
+                                Agriculture Labour</h1>
+                            <p class="lead mb-5 opacity-90 text-white" data-i18n="hero_sub2">Bringing modern technology
+                                to Trichy's
+                                traditional farms. Hire skilled workers at fair daily wages.</p>
+                            <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3">
+                                <a href="#post-job" class="btn btn-modern btn-primary-custom btn-lg"
+                                    data-i18n="hero_btn_find">Find Workers
+                                    Now</a>
+                                <a href="https://wa.me/91XXXXXXXXXX"
+                                    class="btn btn-modern btn-outline-light btn-lg border-2">
+                                    <i class="fab fa-whatsapp"></i> <span data-i18n="hero_btn_chat">Chat on
+                                        WhatsApp</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#hero" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#hero" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </header>
+
+    <!-- Post Labour Section (Farmer Side) -->
+    <section id="post-job" class="py-5">
+        <div class="container py-4">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="card-modern p-4 p-md-5">
+                        <div class="text-center mb-5">
+                            <span class="badge bg-success-subtle text-primary-color px-3 py-2 rounded-pill mb-3"
+                                data-i18n="farmer_portal">Farmer's Portal</span>
+                            <h2 class="display-6 fw-bold" data-i18n="post_title">Post Labour Requirement</h2>
+                            <p class="text-muted" data-i18n="post_sub">Fill the details to get workers via WhatsApp</p>
+                        </div>
+                        <form id="farmerForm">
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold" data-i18n="label_fName">Farmer Name</label>
+                                    <input type="text" class="form-control" id="fName" placeholder="Enter your name"
+                                        data-i18n="ph_fName" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold" data-i18n="label_fMobile">Mobile
+                                        Number</label>
+                                    <input type="tel" class="form-control" id="fMobile"
+                                        placeholder="Enter mobile number" data-i18n="ph_fMobile" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold" data-i18n="label_fLoc">Location (Trichy
+                                        Areas)</label>
+                                    <select class="form-select" id="fLocation" required>
+                                        <option value="" selected disabled data-i18n="opt_selArea">Select Area</option>
+                                        <option>Srirangam</option>
+                                        <option>Thiruverumbur</option>
+                                        <option>Lalgudi</option>
+                                        <option>Manapparai</option>
+                                        <option>Samayapuram</option>
+                                        <option>Tiruverumbur</option>
+                                        <option>Woraiyur</option>
+                                        <option>K.K. Nagar</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold" data-i18n="label_fWork">Work Type</label>
+                                    <select class="form-select" id="fWorkType" required>
+                                        <option value="" selected disabled data-i18n="opt_selWork">Select Work</option>
+                                        <option>Harvesting</option>
+                                        <option>Paddy Cutting</option>
+                                        <option>Planting</option>
+                                        <option>Tractor Work</option>
+                                        <option>Irrigation</option>
+                                        <option>Fertilizer Work</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label fw-semibold" data-i18n="label_fCount">Workers
+                                        Needed</label>
+                                    <input type="number" class="form-control" id="fCount" placeholder="0" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label fw-semibold" data-i18n="label_fWage">Wage per Day
+                                        (₹)</label>
+                                    <input type="number" class="form-control" id="fWage" placeholder="₹700" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label fw-semibold" data-i18n="label_fDate">Start Date</label>
+                                    <input type="date" class="form-control" id="fDate" required>
+                                </div>
+                                <div class="col-12 text-center mt-5">
+                                    <button type="submit" class="btn btn-modern btn-primary-custom btn-lg w-100">
+                                        <i class="fab fa-whatsapp me-2"></i> <span data-i18n="btn_postWA">Post on
+                                            WhatsApp</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Worker Registration Section -->
+    <section id="register" class="py-5 bg-white">
+        <div class="container py-4">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5">
+                    <h2 class="display-5 fw-bold mb-4" data-i18n="reg_title">Register as a Worker</h2>
+                    <p class="text-muted fs-5 mb-4" data-i18n="reg_sub">Connect with farmers in Trichy and get daily
+                        wage work directly on
+                        your phone.</p>
+                    <div class="alert bg-success-subtle border-0 rounded-4 p-4">
+                        <div class="d-flex align-items-start gap-3">
+                            <i class="fas fa-info-circle text-primary-color fs-4 mt-1"></i>
+                            <div>
+                                <h6 class="fw-bold text-primary-color" data-i18n="reg_why_q">Why Register?</h6>
+                                <p class="small mb-0 opacity-75" data-i18n="reg_why_a">Farmers can find you easily. You
+                                    get work alerts and
+                                    direct calls/messages.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="card-modern shadow-md p-4">
+                        <form id="workerForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" id="wName" placeholder="Your Name"
+                                        data-i18n="ph_wName" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="tel" class="form-control" id="wMobile" placeholder="Mobile Number"
+                                        data-i18n="ph_wMobile" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <select class="form-select" id="wSkill" required>
+                                        <option value="" selected disabled data-i18n="opt_selSkill">Select Skill
+                                        </option>
+                                        <option>Harvesting Expert</option>
+                                        <option>Tractor Driver</option>
+                                        <option>General Labour</option>
+                                        <option>Planting Specialist</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="number" class="form-control" id="wExp" placeholder="Experience (Years)"
+                                        data-i18n="ph_wExp" required>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <button type="submit" class="btn btn-modern btn-secondary-custom w-100"
+                                        data-i18n="btn_regNow">
+                                        Register Now
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Available Jobs Section -->
+    <section id="jobs" class="py-5">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="display-6 fw-bold" data-i18n="jobs_title">Available Jobs in Trichy</h2>
+                <p class="text-muted" data-i18n="jobs_sub">Currently active labor requirements</p>
+            </div>
+            <div class="row g-4" id="jobGrid">
+                <!-- Sample Job 1 -->
+                <div class="col-md-4">
+                    <div class="card-modern p-4 border-top border-4 border-success">
+                        <div class="d-flex justify-content-between mb-3">
+                            <span class="badge bg-success-subtle text-success">Harvesting</span>
+                            <span class="text-muted small"><i class="fas fa-clock"></i> 2 days ago</span>
+                        </div>
+                        <h5 class="fw-bold">10 Workers Needed</h5>
+                        <p class="text-muted mb-3"><i class="fas fa-map-marker-alt me-2"></i> Lalgudi, Trichy</p>
+                        <div class="bg-light p-3 rounded-3 mb-3">
+                            <div class="d-flex justify-content-between small mb-1">
+                                <span>Wage:</span> <span class="fw-bold">₹700 / Day</span>
+                            </div>
+                            <div class="d-flex justify-content-between small">
+                                <span>Duration:</span> <span class="fw-bold">5 Days</span>
+                            </div>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <a href="tel:91XXXXXXXXXX" class="btn btn-outline-success btn-modern py-2">Call Now</a>
+                            <a href="https://wa.me/91XXXXXXXXXX" class="btn btn-success btn-modern py-2">WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sample Job 2 -->
+                <div class="col-md-4">
+                    <div class="card-modern p-4 border-top border-4 border-warning">
+                        <div class="d-flex justify-content-between mb-3">
+                            <span class="badge bg-warning-subtle text-warning-emphasis">Paddy Cutting</span>
+                            <span class="text-muted small"><i class="fas fa-clock"></i> Today</span>
+                        </div>
+                        <h5 class="fw-bold">15 Workers Needed</h5>
+                        <p class="text-muted mb-3"><i class="fas fa-map-marker-alt me-2"></i> Thiruverumbur</p>
+                        <div class="bg-light p-3 rounded-3 mb-3">
+                            <div class="d-flex justify-content-between small mb-1">
+                                <span>Wage:</span> <span class="fw-bold">₹650 / Day</span>
+                            </div>
+                            <div class="d-flex justify-content-between small">
+                                <span>Duration:</span> <span class="fw-bold">3 Days</span>
+                            </div>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <a href="tel:91XXXXXXXXXX" class="btn btn-outline-success btn-modern py-2">Call Now</a>
+                            <a href="https://wa.me/91XXXXXXXXXX" class="btn btn-success btn-modern py-2">WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sample Job 3 -->
+                <div class="col-md-4">
+                    <div class="card-modern p-4 border-top border-4 border-primary">
+                        <div class="d-flex justify-content-between mb-3">
+                            <span class="badge bg-primary-subtle text-primary">Tractor Work</span>
+                            <span class="text-muted small"><i class="fas fa-clock"></i> 5 hours ago</span>
+                        </div>
+                        <h5 class="fw-bold">2 Drivers Needed</h5>
+                        <p class="text-muted mb-3"><i class="fas fa-map-marker-alt me-2"></i> Manapparai</p>
+                        <div class="bg-light p-3 rounded-3 mb-3">
+                            <div class="d-flex justify-content-between small mb-1">
+                                <span>Wage:</span> <span class="fw-bold">₹900 / Day</span>
+                            </div>
+                            <div class="d-flex justify-content-between small">
+                                <span>Duration:</span> <span class="fw-bold">1 Day</span>
+                            </div>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <a href="tel:91XXXXXXXXXX" class="btn btn-outline-success btn-modern py-2">Call Now</a>
+                            <a href="https://wa.me/91XXXXXXXXXX" class="btn btn-success btn-modern py-2">WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Extra Jobs (Hidden by default) -->
+            <div class="row g-4 mt-2 d-none" id="extraJobs">
+                <!-- Sample Job 4 -->
+                <div class="col-md-4">
+                    <div class="card-modern p-4 border-top border-4 border-info">
+                        <div class="d-flex justify-content-between mb-3">
+                            <span class="badge bg-info-subtle text-info-emphasis">Planting</span>
+                            <span class="text-muted small"><i class="fas fa-clock"></i> 1 day ago</span>
+                        </div>
+                        <h5 class="fw-bold">8 Workers Needed</h5>
+                        <p class="text-muted mb-3"><i class="fas fa-map-marker-alt me-2"></i> Srirangam</p>
+                        <div class="bg-light p-3 rounded-3 mb-3">
+                            <div class="d-flex justify-content-between small mb-1">
+                                <span>Wage:</span> <span class="fw-bold">₹600 / Day</span>
+                            </div>
+                            <div class="d-flex justify-content-between small">
+                                <span>Duration:</span> <span class="fw-bold">4 Days</span>
+                            </div>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <a href="tel:91XXXXXXXXXX" class="btn btn-outline-success btn-modern py-2">Call Now</a>
+                            <a href="https://wa.me/91XXXXXXXXXX" class="btn btn-success btn-modern py-2">WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sample Job 5 -->
+                <div class="col-md-4">
+                    <div class="card-modern p-4 border-top border-4 border-success">
+                        <div class="d-flex justify-content-between mb-3">
+                            <span class="badge bg-success-subtle text-success">Irrigation</span>
+                            <span class="text-muted small"><i class="fas fa-clock"></i> 3 days ago</span>
+                        </div>
+                        <h5 class="fw-bold">5 Workers Needed</h5>
+                        <p class="text-muted mb-3"><i class="fas fa-map-marker-alt me-2"></i> Samayapuram</p>
+                        <div class="bg-light p-3 rounded-3 mb-3">
+                            <div class="d-flex justify-content-between small mb-1">
+                                <span>Wage:</span> <span class="fw-bold">₹750 / Day</span>
+                            </div>
+                            <div class="d-flex justify-content-between small">
+                                <span>Duration:</span> <span class="fw-bold">2 Days</span>
+                            </div>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <a href="tel:91XXXXXXXXXX" class="btn btn-outline-success btn-modern py-2">Call Now</a>
+                            <a href="https://wa.me/91XXXXXXXXXX" class="btn btn-success btn-modern py-2">WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sample Job 6 -->
+                <div class="col-md-4">
+                    <div class="card-modern p-4 border-top border-4 border-danger">
+                        <div class="d-flex justify-content-between mb-3">
+                            <span class="badge bg-danger-subtle text-danger">Fertilizer Work</span>
+                            <span class="text-muted small"><i class="fas fa-clock"></i> 6 hours ago</span>
+                        </div>
+                        <h5 class="fw-bold">12 Workers Needed</h5>
+                        <p class="text-muted mb-3"><i class="fas fa-map-marker-alt me-2"></i> Woraiyur</p>
+                        <div class="bg-light p-3 rounded-3 mb-3">
+                            <div class="d-flex justify-content-between small mb-1">
+                                <span>Wage:</span> <span class="fw-bold">₹680 / Day</span>
+                            </div>
+                            <div class="d-flex justify-content-between small">
+                                <span>Duration:</span> <span class="fw-bold">3 Days</span>
+                            </div>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <a href="tel:91XXXXXXXXXX" class="btn btn-outline-success btn-modern py-2">Call Now</a>
+                            <a href="https://wa.me/91XXXXXXXXXX" class="btn btn-success btn-modern py-2">WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- View More Button -->
+            <div class="text-center mt-5">
+                <button id="viewMoreBtn" class="btn btn-modern btn-outline-primary px-5 py-3" data-i18n="btn_viewMore">
+                    View More Jobs
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works & Testimonials -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <h3 class="fw-bold mb-4" data-i18n="how_title">How It Works</h3>
+                    <div class="d-flex gap-4 mb-4">
+                        <div class="bg-primary-color text-white rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                            style="width: 40px; height: 40px;">1</div>
+                        <div>
+                            <h6 class="fw-bold" data-i18n="how_step1_t">Post your Requirement</h6>
+                            <p class="small text-muted" data-i18n="how_step1_d">Farmer fills the form with details like
+                                work type and wages.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-4 mb-4">
+                        <div class="bg-primary-color text-white rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                            style="width: 40px; height: 40px;">2</div>
+                        <div>
+                            <h6 class="fw-bold" data-i18n="how_step2_t">Workers Contact You</h6>
+                            <p class="small text-muted" data-i18n="how_step2_d">Nearby labourers see your job and call
+                                or WhatsApp you directly.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-4">
+                        <div class="bg-primary-color text-white rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                            style="width: 40px; height: 40px;">3</div>
+                        <div>
+                            <h6 class="fw-bold" data-i18n="how_step3_t">Job Done!</h6>
+                            <p class="small text-muted" data-i18n="how_step3_d">Confirm the workers, they come to your
+                                field, and work starts.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="fw-bold mb-4" data-i18n="rev_title">Farmer Reviews</h3>
+                    <div class="card-modern bg-light border-0 p-4 mb-3">
+                        <p class="fst-italic opacity-75 mb-3">"Nalla velai aalu easy-aa kidaichuthu. Srirangam la enaku
+                            urgent cutting-ku aalu venum nu poten, 1 hour la call vandhuchu."</p>
+                        <h6 class="fw-bold mb-0">Murugan K.</h6>
+                        <small class="text-success">Paddy Farmer</small>
+                    </div>
+                    <div class="card-modern bg-light border-0 p-4">
+                        <p class="fst-italic opacity-75 mb-3">"Harvesting-ku correct time-ku help vandhuduchu. Digital
+                            system use panna easy-aa iruku."</p>
+                        <h6 class="fw-bold mb-0">Raja T.</h6>
+                        <small class="text-success">Turmeric Farmer</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-secondary-color text-white">
+        <div class="container text-center text-md-start">
+            <div class="row g-4">
+                <div class="col-md-4">
+                   <img src="./logo.png" alt="Logo" class="me-2"
+                    style="height: 40px; width: auto; object-fit: contain;">
+                    <h5 class="fw-bold mb-4" data-i18n="appName">Trichy Farm Labour Connect</h5>
+                    <p class="small opacity-75" data-i18n="footer_desc">Dedicated to supporting farmers in and around
+                        Tiruchirappalli with easy
+                        labour solutions.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="fw-bold mb-4" data-i18n="contact_title">Contact Detail</h5>
+                    <p class="small mb-1"><i class="fas fa-phone me-2"></i> +91 91765 43210</p>
+                    <p class="small mb-1"><i class="fab fa-whatsapp me-2"></i> +91 91765 43210</p>
+                    <p class="small"><i class="fas fa-envelope me-2"></i> trichyfarms@gmail.com</p>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <h5 class="fw-bold mb-4" data-i18n="footer_follow">Follow Us</h5>
+                    <div class="d-flex justify-content-center justify-content-md-end gap-3 text-white fs-4">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-5 opacity-25">
+            <div class="text-center small opacity-50">
+                <p>&copy; 2026 <span data-i18n="appName">Trichy Farm Labour Connect</span>. <span
+                        data-i18n="footer_rights">All Rights Reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Icon -->
+    <a href="https://wa.me/9191XXXXXXXX?text=Vanakkam%2C%20I%20need%20help%20with%20Trichy%20Farm%20Labour%20Platform"
+        class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="./main.js"></script>
+</body>
+
+</html>
